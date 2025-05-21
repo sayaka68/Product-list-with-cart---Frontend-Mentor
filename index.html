@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- <ul id="practice"></ul> -->
+      <div class="l-container">
+        <div class="l-productsArea">
+          <h1>Desserts</h1>
+          <div class="p-products">
+            <ul id="product-list" class="p-products__list"></ul>
+          </div>
+        </div>
+
+        <div id="cart" class="p-cart"></div>
+      </div>
+    </main>
+    <div
+      id="confirmationModal"
+      class="p-confirmationModal"
+      style="display: none"
+    ></div>
+    <div class="u-overlay" id="overlayElement"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

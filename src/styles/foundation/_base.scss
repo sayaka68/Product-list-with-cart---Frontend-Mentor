@@ -1,0 +1,26 @@
+@use "../global" as global;
+@use "../global/variables" as *;
+
+:root {
+  --white: #{$white};
+  --black: #{$black};
+  --red: #{$red};
+  --green: #{$green};
+  --rose900: #{$rose-900};
+  --rose500: #{$rose-500};
+  --rose400: #{$rose-400};
+  --rose300: #{$rose-300};
+  --rose100: #{$rose-100};
+  --rose50: #{$rose-50};
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  color: var(--rose900);
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+}

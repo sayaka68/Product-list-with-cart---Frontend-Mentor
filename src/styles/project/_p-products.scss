@@ -1,0 +1,18 @@
+@use "../global" as global;
+
+.p-products {
+  padding-block: 32px;
+}
+
+.p-products__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include global.mq(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 24px;
+  }
+}

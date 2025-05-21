@@ -1,0 +1,87 @@
+@use "../global" as global;
+
+.p-confirmationModal {
+  position: fixed;
+  bottom: 0;
+  border-radius: 12px 12px 0px 0px;
+  background: var(--white, #fff);
+  z-index: 20;
+  padding: 40px 24px 24px 24px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  height: calc(100dvh - 95px);
+  max-width: 400px;
+  inset-inline: 0;
+  margin-inline: auto;
+
+  @include global.mq(md) {
+    border-radius: 12px;
+    max-width: 688px;
+    height: fit-content;
+    max-height: calc(100dvh - 80px);
+    padding: 40px;
+    inset: 0;
+    margin: auto;
+  }
+
+  @include global.mq(lg) {
+    max-width: 512px;
+  }
+}
+.p-confirmationModal__messages {
+  &::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(public/images/icon-order-confirmed.svg) no-repeat center
+      center / contain;
+  }
+  h2 {
+    @include global.textPreset1;
+    font-weight: 700;
+    margin-top: 24px;
+  }
+
+  p {
+    color: var(--rose500, #87635a);
+    font-size: 16px;
+    @include global.lh(21, 16);
+    margin-top: 8px;
+  }
+}
+
+.p-confirmationModal__itemsArea {
+  background: var(--rose50, #fcf8f6);
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 32px;
+}
+
+.p-confirmationModal__totalPrice {
+  @include global.textPreset4;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    @include global.textPreset2;
+    font-weight: 700;
+  }
+}
+
+.p-confirmationModal__newOderButtonArea {
+  margin-top: 32px;
+
+  .newOderButton {
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.25) 0%,
+          rgba(0, 0, 0, 0.25) 100%
+        ),
+        var(--red, #c73b0f);
+    }
+  }
+}

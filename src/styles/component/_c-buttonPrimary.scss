@@ -1,0 +1,18 @@
+@use "../global" as global;
+
+.c-buttonPrimary {
+  padding: 12px;
+  text-align: center;
+  border-radius: 9999px;
+  border: 1px solid var(--rose400);
+  width: 100%;
+  font-weight: 600;
+  background-color: var(--white);
+  @include global.textPreset4;
+}
+
+.c-buttonPrimary--rev {
+  background-color: var(--red);
+  color: var(--white);
+  border: 1px solid var(--red);
+}

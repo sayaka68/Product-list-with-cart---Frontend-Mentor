@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+.u-overlay {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.3s;
+
+  &.is-active {
+    opacity: 0.5;
+    height: 100%;
+  }
+}

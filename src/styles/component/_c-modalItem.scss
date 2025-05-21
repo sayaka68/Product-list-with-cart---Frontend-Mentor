@@ -1,0 +1,52 @@
+@use "../global" as global;
+@use "sass:math";
+
+.c-modalItem {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rose100);
+
+  &:nth-child(n + 2) {
+    padding-top: 16px;
+  }
+}
+.c-modalItem__img {
+  width: math.div(48, 279) * 100%;
+  margin-right: 16px;
+  border-radius: 4px;
+
+  @include global.mq(md) {
+    width: math.div(48, 560) * 100%;
+  }
+}
+
+.c-modalItem__itemDetails {
+  min-width: 0;
+}
+.c-modalItem__itemName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include global.textPreset4;
+  font-weight: 600;
+}
+
+.c-modalItem__itemQuantity {
+  @include global.textPreset4;
+  font-weight: 600;
+  color: var(--red);
+  margin-right: 8px;
+  @include global.lh(19, 14);
+}
+
+.c-modalItem__itemPrice {
+  @include global.textPreset4;
+  color: var(--rose500);
+  @include global.lh(19, 14);
+}
+
+.c-modalItem__itemTotal {
+  margin-left: auto;
+  font-weight: 600;
+}

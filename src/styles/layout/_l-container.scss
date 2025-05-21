@@ -1,0 +1,31 @@
+@use "../global" as global;
+@use "sass:math";
+
+.l-container {
+  background-color: var(--rose50);
+  padding: 24px;
+
+  h1 {
+    @include global.textPreset1;
+  }
+
+  @include global.mq(md) {
+    padding: 40px;
+  }
+
+  @include global.mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+
+    .l-productsArea {
+      flex-basis: math.div(800px, 1100px) * 100%;
+    }
+
+    .p-cart {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}

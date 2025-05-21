@@ -1,0 +1,18 @@
+//色
+$rose-900: #260f08;
+$rose-500: #87635a;
+$rose-400: #ad8a85;
+$rose-300: #caafa7;
+$rose-100: #f5eeec;
+$rose-50: #fcf8f6;
+$green: #1ea575;
+$red: #c73b0f;
+$black: #000;
+$white: #fff;
+
+$breakpoints: (
+  "xs": "screen and (min-width:1px) and ( max-width:370px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1024px)",
+  // "xl": "screen and (min-width: 1280px)",
+);

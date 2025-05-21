@@ -1,0 +1,83 @@
+@use "../global" as global;
+.c-card {
+  .addToCartBtn {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url(public/images/icon-add-to-cart.svg);
+    }
+  }
+  .addToCartBtn:hover,
+  .addToCartBtn:focus-visible {
+    color: var(--red);
+    border-color: currentColor;
+  }
+
+  .quantityButton {
+    display: flex;
+    justify-content: space-between;
+
+    .minusIcon,
+    .plusIcon {
+      cursor: pointer;
+      line-height: 1;
+
+      img {
+        outline: none;
+      }
+    }
+  }
+}
+
+.c-card {
+  &.js-isInCart {
+    .c-card__productImage {
+      border: 2px solid var(--red);
+    }
+  }
+}
+
+.c-card__wrapper {
+  position: relative;
+}
+
+.c-card__productImage {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.c-card__btnArea {
+  position: absolute;
+  bottom: -22px;
+  inset-inline: 0;
+  margin-inline: auto;
+  width: fit-content;
+  width: 160px;
+}
+
+.c-card__productCat {
+  margin-top: 16px;
+  display: inline-block;
+  color: var(--rose500);
+  @include global.textPreset4;
+}
+
+.c-card__productName {
+  @include global.textPreset3;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.c-card__productPrice {
+  @include global.textPreset3;
+  color: var(--red);
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 4px;
+}
